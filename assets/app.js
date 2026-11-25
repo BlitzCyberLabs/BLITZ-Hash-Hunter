@@ -24,9 +24,14 @@ function checkTask2(){
  if(vals.join('|')==='NovaTech#2026|welcome123|summer2024|dragon2025'){markDone(2);setResult('result','All 4 passwords verified. Task 2 completed; Task 3 unlocked.',true);showFlag(2);unlockNext();nav();}
  else setResult('result','Not accepted. Crack and enter all 4 passwords (both MD5 and SHA-1 records) from leaked_credentials.txt.',false);
 }
+function showAdminPanel(){
+ let lb=document.getElementById('loginBox'),ap=document.getElementById('adminPanel');
+ if(lb)lb.classList.add('hidden');
+ if(ap)ap.classList.remove('hidden');
+}
 function unlockTask3(){
  const u=document.getElementById('user').value.trim(),p=document.getElementById('pass').value.trim();
- if(u==='admin'&&p==='NovaTech#2026'){markDone(3);setResult('result','Vault authenticated. Task 3 completed!',true);showFlag(3);nav();}
+ if(u==='admin'&&p==='NovaTech#2026'){markDone(3);showAdminPanel();showFlag(3);nav();}
  else setResult('result','Authentication failed. Use the admin username and password recovered in Task 2.',false);
 }
-function guard(n){if(n>1&&!done(n-1)){location.replace('task'+(n-1)+'.html');return false;}if(done(n)){showFlag(n);unlockNext();}nav();return true;}
+function guard(n){if(n>1&&!done(n-1)){location.replace('task'+(n-1)+'.html');return false;}if(done(n)){if(n===3)showAdminPanel();showFlag(n);unlockNext();}nav();return true;}
