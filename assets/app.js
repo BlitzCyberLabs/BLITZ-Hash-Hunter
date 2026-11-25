@@ -32,6 +32,6 @@ function showAdminPanel(){
 function unlockTask3(){
  const u=document.getElementById('user').value.trim(),p=document.getElementById('pass').value.trim();
  if(u==='admin'&&p==='NovaTech#2026'){markDone(3);showAdminPanel();showFlag(3);nav();}
- else setResult('result','Authentication failed. Use the admin username and password recovered in Task 2.',false);
+ else setResult('result','Wrong username or password.',false);
 }
 function guard(n){if(n>1&&!done(n-1)){location.replace('task'+(n-1)+'.html');return false;}if(done(n)){if(n===3)showAdminPanel();showFlag(n);unlockNext();}nav();return true;}
