@@ -1,0 +1,4 @@
+# NovaTech training hash samples
+sample_A:5f4dcc3b5aa765d61d8327deb882cf99
+sample_B:b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3
+sample_C:085a403d2b86d3dfb75ab05b1524f0804192e6b46f2c9337f97fb708ec64a2f8
