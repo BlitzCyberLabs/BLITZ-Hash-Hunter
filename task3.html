@@ -1,13 +1,18 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Task 3 | BLITZ Hash Hunter</title><link rel="stylesheet" href="assets/style.css"></head><body><header><div class="brand">BLITZ <small>CYBER RANGE</small></div><div class="case">HASH HUNTER / NT-IR-026</div></header><main><div class="eyebrow">CEH PRACTICAL / HASH HUNTER</div><h1>HASH <em>HUNTER</em></h1><nav class="tasknav"><a id="nav1" href="task1.html">TASK 01</a><a id="nav2" class="locked">TASK 02 🔒</a><a id="nav3" class="locked">TASK 03 🔒</a></nav><section class="panel"><div class="step">TASK 03 / UNLOCK EVIDENCE VAULT</div><h2>Evidence vault authentication</h2>
-<p>Use the administrator credential recovered in Task 2 to authenticate to this final in-lab evidence vault. Successful authentication completes the exercise and reveals the final flag.</p>
-<a class="download" href="evidence/incident_note.txt" download>↓ incident_note.txt</a>
-<div id="loginBox">
-<label for="user">Username</label><input id="user" value="admin" autocomplete="off">
-<label for="pass">Recovered password</label><input id="pass" type="password" placeholder="Enter recovered administrator password">
-<button onclick="unlockTask3()">Authenticate &amp; complete Task 3</button><div id="result" class="result"></div>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Task 3 | BLITZ Hash Hunter</title><link rel="stylesheet" href="assets/style.css"></head><body><header><div class="brand">BLITZ <small>CYBER RANGE</small></div><div class="case">HASH HUNTER / NT-IR-026</div></header><main><div class="eyebrow">CEH PRACTICAL / HASH HUNTER</div><h1>HASH <em>HUNTER</em></h1><nav class="tasknav"><a id="nav1" href="task1.html">TASK 01</a><a id="nav2" class="locked">TASK 02 🔒</a><a id="nav3" class="locked">TASK 03 🔒</a></nav><section class="panel"><div class="step">TASK 03 / CORPORATE PORTAL ACCESS</div><h2>NovaTech Evidence Portal</h2>
+<p>Sign in with the administrator credentials recovered in Task 2 to access the internal admin dashboard and retrieve the final flag.</p>
+<div id="loginBox" class="login-card">
+<div class="login-head"><b>NovaTech SSO</b><span>Internal Administration</span></div>
+<label for="user">Username</label><input id="user" type="text" autocomplete="off" placeholder="Enter username">
+<label for="pass">Password</label><input id="pass" type="password" autocomplete="off" placeholder="Enter password">
+<button onclick="unlockTask3()">Sign In</button><div id="result" class="result"></div>
 </div>
-<div id="adminPanel" class="hidden" style="margin-top:16px">
-<div class="notice"><b>ADMIN PANEL · SESSION ACTIVE</b> — Welcome, <b>admin</b>. Evidence Vault (Case <b>NT-IR-026</b>) unlocked.</div>
-<div class="row" style="margin-top:12px"><span class="pill">ROLE: ADMINISTRATOR</span><span class="pill">VAULT: UNLOCKED</span><span class="pill">AUDIT: 4/4 VERIFIED</span></div>
+<div id="adminPanel" class="hidden">
+<div class="admin-bar"><div><b>NovaTech Admin Home</b><small>Internal Security &amp; Incident Portal</small></div><span class="pill">SESSION: ADMIN</span></div>
+<div class="stat-grid">
+<div class="stat-card"><small>CASE REFERENCE</small><b>NT-IR-026</b></div>
+<div class="stat-card"><small>VAULT STATUS</small><b>UNLOCKED</b></div>
+<div class="stat-card"><small>ACCOUNTS AUDITED</small><b>4 / 4 VERIFIED</b></div>
+</div>
+<div class="notice" style="margin-top:14px"><b>Executive Incident Summary</b><br>Offline hash audit completed. Weak legacy MD5 and SHA-1 digests have been flagged for mandatory rotation. Final incident closure token is issued below.</div>
 <div id="flag" class="flag hidden"></div>
 </div></section><footer>BLITZ CYBER RANGE · TRAINING ENVIRONMENT · SYNTHETIC DATA ONLY</footer></main><script src="assets/app.js"></script><script>guard(3);</script></body></html>
