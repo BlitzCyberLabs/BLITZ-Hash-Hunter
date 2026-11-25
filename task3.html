@@ -2,8 +2,8 @@
 <p>Sign in with the administrator credentials recovered in Task 2 to access the internal admin dashboard and retrieve the final flag.</p>
 <div id="loginBox" class="login-card">
 <div class="login-head"><b>NovaTech SSO</b><span>Internal Administration</span></div>
-<label for="user">Username</label><input id="user" type="text" autocomplete="off" placeholder="Enter username">
-<label for="pass">Password</label><input id="pass" type="password" autocomplete="off" placeholder="Enter password">
+<label for="user">Username</label><input id="user" name="vault_user" type="text" autocomplete="off" readonly onfocus="this.removeAttribute('readonly')" placeholder="Enter username">
+<label for="pass">Password</label><input id="pass" name="vault_pass" type="password" autocomplete="new-password" readonly onfocus="this.removeAttribute('readonly')" placeholder="Enter password">
 <button onclick="unlockTask3()">Sign In</button><div id="result" class="result"></div>
 </div>
 <div id="adminPanel" class="hidden">

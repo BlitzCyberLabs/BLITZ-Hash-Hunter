@@ -15,8 +15,9 @@ function nav(){[1,2,3].forEach(n=>{let a=document.getElementById('nav'+n);if(!a)
 function showFlag(n){let f=document.getElementById('flag');f.textContent=FLAGS[String(n)];f.classList.remove('hidden');}
 function setResult(id,msg,ok){let e=document.getElementById(id);e.textContent=msg;e.className='result '+(ok?'ok':'bad');}
 function checkTask1(){
- const v=['a','b','c'].map(x=>document.getElementById(x).value);
- if(v.join('|')==='MD5|SHA-1|SHA-256'){markDone(1);setResult('result','Task 1 completed. Task 2 unlocked; flag revealed.',true);showFlag(1);unlockNext();nav();}
+ const norm=s=>s.trim().toUpperCase().replace(/[\s-]+/g,'');
+ const v=['a','b','c'].map(x=>norm(document.getElementById(x).value));
+ if(v.join('|')==='MD5|SHA1|SHA256'){markDone(1);setResult('result','Task 1 completed. Task 2 unlocked; flag revealed.',true);showFlag(1);unlockNext();nav();}
  else setResult('result','Incorrect. Re-check each sample with hashid or hash-identifier.',false);
 }
 function checkTask2(){
